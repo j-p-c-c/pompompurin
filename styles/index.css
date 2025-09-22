@@ -1,0 +1,161 @@
+@font-face {
+   font-family: pixel;
+   src: url('../fonts/Minecraft.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+p {
+   font-family: pixel;
+   font-size: 1em;
+}
+
+.sub {
+   color: rgb(137 61 61);
+   font-size: .9em;
+}
+
+body {
+   background: #FF9F80;
+   background: white;
+   background: rgb(223, 181, 120);
+   margin: 0;
+}
+
+canvas {
+   border-radius: 1em;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   max-width: 100%;
+   max-height: 100%;
+   box-sizing: border-box;
+   /* border: solid 1px black; */
+   
+   /* box-shadow: 0 0 10px 0px #0005; */
+   /* background: url(../images/background.png);
+   background-size: auto 214%;
+   background-position-x: 29%;
+   background-position-y: 102%; */
+   margin: 0
+}
+
+#main_container {
+   /* background: red; */
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+   /* padding: .5em; */
+}
+
+#main_container div {}
+
+#dialog {
+   transition: .4s ease;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translate(-50%);
+   width: 90%;
+   margin-top: 1em;
+   /* background: rgb(255, 200, 80); */
+   /* background: rgb(250, 147, 99); */
+   padding: 0 1em;
+   box-sizing: border-box;
+}
+
+#dialog p {
+   box-sizing: border-box;
+   padding: 1em;
+   background: #000a;
+   width: 90%;
+   margin: 0 auto;
+   color: #eee;
+   border-radius: 1em;
+}
+
+#content {
+   flex: 1;
+   position: relative;
+}
+
+#instructions {
+   text-align: center;
+   font-size: .9em;
+   animation: flash 1.5s ease infinite;
+}
+
+@keyframes flash {
+   from {
+      opacity: 1;
+   }
+
+   50% {
+      opacity: .5;
+   }
+
+   to {
+      opacity: 1;
+   }
+}
+
+#term_game_container {
+   display: none;
+   transition: .5s ease opacity;
+   opacity: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: #ffd75c;
+   background: rgb(255, 255, 255);
+   box-sizing: border-box;
+   padding: 1em;
+   width: 80%;
+   /* border: solid 4px black; */
+   border-radius: 1em;
+}
+
+#term_instructions {
+   text-align: center;
+   font-size: .9em;
+   width: 100%;
+}
+
+#term_container {
+   position: relative;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* image */
+#term {
+   position: relative;
+   z-index: 99;
+   /* top: 100%; left: 50%; */
+   /* transform: translate(-50%, -100%); */
+   aspect-ratio: 1/1;
+   width: 100%;
+   background: center/cover url(../images/animatrografo.png);
+   image-rendering: pixelated;
+   /* box-shadow: 0 0 20px 10px #ffd75c; */
+}
+
+#term_filled {
+   z-index: 98;
+   position: absolute;
+   top: calc(100%);
+   left: 50%;
+   transform: translate(-50%, -100%);
+   height: 100%;
+   width: 100%;
+   background: rgb(253, 65, 65);
+}
