@@ -685,11 +685,6 @@ const fns = [
    }
 ]
 
-addEventListener('DOMContentLoaded', () => {
-   instructionsWriter.set({text: 'Presiona para empezar...'})
-   loop()
-})
-
 mainContainer.onclick = () => {
    if (disp) fns[cfn]()
 }
